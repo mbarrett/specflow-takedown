@@ -1,43 +1,36 @@
-﻿using System.Collections.Generic;
-using EasyHttp.Http;
+﻿using EasyHttp.Http;
 using Shouldly;
-using specflow_takedown.Classes;
 using specflow_takedown.Models;
+using specflow_takedown.Support;
+using System.Collections.Generic;
 using TechTalk.SpecFlow;
 
 namespace specflow_takedown.Steps
 {
     [Binding]
-    public class PhotoEndpointSteps
+    public class PhotoEndpointSteps : StepsBase
     {
-        private PhotoService _photoService = new PhotoService();
-        private HttpClient _httpClient = new HttpClient();
-        private HttpResponse _response;
         private IList<Photo> _photos = new List<Photo>();
-
+        
         [Given(@"I am requesting photo metadata")]
         public void GivenIAmRequestingPhotoMetadata()
         {
-            _photoService.Uri = "http://jsonplaceholder.typicode.com/photos";
+            Save("uri", "http://jsonplaceholder.typicode.com/photos");            
         }
-        
-        [When(@"I make a request")]
-        public void WhenIMakeARequest()
-        {
-            _httpClient.Request.Accept = HttpContentTypes.ApplicationJson;
-            _response = _httpClient.Get(_photoService.Uri);            
-        }
-        
+
         [Then(@"the response should include (.*) photos")]
         public void ThenTheResponseShouldIncludePhotos(int count)
         {
-            _photos = _response.StaticBody<IList<Photo>>();
+            var response = Retrieve<HttpResponse>("response");
+            _photos = response.StaticBody<IList<Photo>>();
             _photos.Count.ShouldBe(count);
         }
         
         [Then(@"each photo should include the field ""(.*)""")]
         public void EachPhotoShouldIncludeTheField(string fieldName)
         {
+            _photos.ShouldNotBeEmpty();
+
             foreach(Photo photo in _photos)
             {
                 var outcome = photo.GetType().GetProperty(fieldName);

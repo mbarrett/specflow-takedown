@@ -74,20 +74,33 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Classes\PhotoService.cs" />
+    <Compile Include="Contexts\HttpClientContext.cs" />
+    <Compile Include="Features\UserEndpoint.feature.cs">
+      <DependentUpon>UserEndpoint.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Features\PhotoEndpoint.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PhotoEndpoint.feature</DependentUpon>
     </Compile>
+    <Compile Include="Models\User.cs" />
     <Compile Include="Models\Photo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\SharedSteps.cs" />
+    <Compile Include="Steps\UserEndpointSteps.cs" />
     <Compile Include="Steps\PhotoEndpointSteps.cs" />
+    <Compile Include="Support\StepsBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Default.srprofile">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Features\UserEndpoint.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>UserEndpoint.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\PhotoEndpoint.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
