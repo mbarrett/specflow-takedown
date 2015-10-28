@@ -1,7 +1,6 @@
 ﻿using EasyHttp.Http;
 using Shouldly;
 using specflow_takedown.Models;
-using specflow_takedown.Support;
 using System.Collections.Generic;
 using TechTalk.SpecFlow;
 
@@ -31,7 +30,7 @@ namespace specflow_takedown.Steps
         {
             _users.ShouldNotBeEmpty();
 
-            foreach (User user in _users)
+            foreach (var user in _users)
             {
                 var outcome = user.GetType().GetProperty(fieldName);
                 outcome.ShouldNotBeNull();

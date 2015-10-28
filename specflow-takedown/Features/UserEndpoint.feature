@@ -1,4 +1,5 @@
-﻿Feature: User endpoint tests
+﻿@run_me
+Feature: User endpoint tests
 	So that I can consume correct user metadata
 	As a consumer
 	I want to be able to query the User Service for information

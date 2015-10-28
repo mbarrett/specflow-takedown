@@ -74,7 +74,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Contexts\HttpClientContext.cs" />
+    <Compile Include="Support\HttpClient.cs" />
     <Compile Include="Features\UserEndpoint.feature.cs">
       <DependentUpon>UserEndpoint.feature</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -91,7 +91,7 @@
     <Compile Include="Steps\SharedSteps.cs" />
     <Compile Include="Steps\UserEndpointSteps.cs" />
     <Compile Include="Steps\PhotoEndpointSteps.cs" />
-    <Compile Include="Support\StepsBase.cs" />
+    <Compile Include="Steps\StepsBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

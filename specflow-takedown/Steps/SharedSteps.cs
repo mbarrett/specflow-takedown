@@ -1,5 +1,4 @@
-﻿using specflow_takedown.Contexts;
-using specflow_takedown.Support;
+﻿using specflow_takedown.Support;
 using TechTalk.SpecFlow;
 
 namespace specflow_takedown.Steps
@@ -11,7 +10,7 @@ namespace specflow_takedown.Steps
         public void WhenIMakeARequest()
         {
             var uri = Retrieve<string>("uri");
-            var response = HttpClientContext.Get(uri);
+            var response = HttpClient.Get(uri);
 
             Save("response", response);
         }     

@@ -18,8 +18,9 @@ namespace specflow_takedown.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("User endpoint tests", Description="So that I can consume correct user metadata\nAs a consumer\nI want to be able to qu" +
-        "ery the User Service for information", SourceFile="Features\\UserEndpoint.feature", SourceLine=0)]
+    [TechTalk.SpecRun.FeatureAttribute("User endpoint tests", new string[] {
+            "run_me"}, Description="So that I can consume correct user metadata\nAs a consumer\nI want to be able to qu" +
+        "ery the User Service for information", SourceFile="Features\\UserEndpoint.feature", SourceLine=1)]
     public partial class UserEndpointTestsFeature
     {
         
@@ -33,7 +34,8 @@ namespace specflow_takedown.Features
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "User endpoint tests", "So that I can consume correct user metadata\nAs a consumer\nI want to be able to qu" +
-                    "ery the User Service for information", ProgrammingLanguage.CSharp, ((string[])(null)));
+                    "ery the User Service for information", ProgrammingLanguage.CSharp, new string[] {
+                        "run_me"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,29 +66,29 @@ namespace specflow_takedown.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Consumer hits the GET user metadata endpoint and is shown the correct metadata", SourceLine=5)]
+        [TechTalk.SpecRun.ScenarioAttribute("Consumer hits the GET user metadata endpoint and is shown the correct metadata", SourceLine=6)]
         public virtual void ConsumerHitsTheGETUserMetadataEndpointAndIsShownTheCorrectMetadata()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Consumer hits the GET user metadata endpoint and is shown the correct metadata", ((string[])(null)));
-#line 6
-this.ScenarioSetup(scenarioInfo);
 #line 7
- testRunner.Given("I am requesting user metadata", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 8
- testRunner.When("I make a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("I am requesting user metadata", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.Then("the response should include 10 users", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I make a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
- testRunner.And("each user should include the field \"Id\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("the response should include 10 users", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 11
- testRunner.And("each user should include the field \"Name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("each user should include the field \"Id\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
- testRunner.And("each user should include the field \"Username\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("each user should include the field \"Name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
- testRunner.And("each user should include the field \"Email\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("each user should include the field \"Username\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 14
- testRunner.And("each user should include the field \"Phone\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("each user should include the field \"Email\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
+ testRunner.And("each user should include the field \"Phone\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 16
  testRunner.And("each user should include the field \"Website\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
