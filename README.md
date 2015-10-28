@@ -14,8 +14,8 @@ To run an acceptance test:
 
 Even better use the command line:
 
-* Navigate to the root of the specflow-takedown project 'cd [file_location]\specflow-takedown\specflow-takedown'
-* Execute the command line test runner by typing 'runtests.cmd' and hit <Enter>
+* Navigate to the root of the specflow-takedown project (cd [file_location]\specflow-takedown\specflow-takedown)
+* Execute the command line test runner by typing 'runtests.cmd' and hit [Enter]
 
 ##Troubleshooting
 
