@@ -5,6 +5,8 @@ A clean and cutdown template for writing acceptance tests against API endpoints.
 
 ##Usage
 
+Ensure you have installed the Visual Studio integration packages for Specflow as documented here <a href="http://www.specflow.org/getting-started">http://www.specflow.org/getting-started</a>
+
 To run an acceptance test:
 
 * Build the solution
