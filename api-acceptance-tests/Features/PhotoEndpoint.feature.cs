@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace specflow_takedown.Features
+namespace api_acceptance_tests.Features
 {
     using TechTalk.SpecFlow;
     

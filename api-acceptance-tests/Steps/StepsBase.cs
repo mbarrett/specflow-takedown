@@ -1,6 +1,6 @@
 ﻿using TechTalk.SpecFlow;
 
-namespace specflow_takedown.Steps
+namespace api_acceptance_tests.Steps
 {
     public class StepsBase
     {

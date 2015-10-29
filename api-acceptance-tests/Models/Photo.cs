@@ -1,4 +1,4 @@
-﻿namespace specflow_takedown.Models
+﻿namespace api_acceptance_tests.Models
 {
     public class Photo
     {

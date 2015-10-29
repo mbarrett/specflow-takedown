@@ -1,7 +1,7 @@
-﻿using specflow_takedown.Support;
+﻿using api_acceptance_tests.Support;
 using TechTalk.SpecFlow;
 
-namespace specflow_takedown.Steps
+namespace api_acceptance_tests.Steps
 {
     [Binding]
     public class SharedSteps : StepsBase

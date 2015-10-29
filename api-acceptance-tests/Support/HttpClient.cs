@@ -1,7 +1,7 @@
 ﻿using EasyHttp.Http;
 using System;
 
-namespace specflow_takedown.Support
+namespace api_acceptance_tests.Support
 {
     public static class HttpClient
     {

@@ -6,8 +6,8 @@
     <ProjectGuid>{4182B10D-006B-498C-9400-9E2F0827A3D6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>specflow_takedown</RootNamespace>
-    <AssemblyName>specflow-takedown</AssemblyName>
+    <RootNamespace>api_acceptance_tests</RootNamespace>
+    <AssemblyName>api-acceptance-tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

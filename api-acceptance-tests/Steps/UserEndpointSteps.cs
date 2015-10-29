@@ -1,10 +1,10 @@
 ﻿using EasyHttp.Http;
 using Shouldly;
-using specflow_takedown.Models;
+using api_acceptance_tests.Models;
 using System.Collections.Generic;
 using TechTalk.SpecFlow;
 
-namespace specflow_takedown.Steps
+namespace api_acceptance_tests.Steps
 {
     [Binding]
     public class UserEndpointSteps : StepsBase
