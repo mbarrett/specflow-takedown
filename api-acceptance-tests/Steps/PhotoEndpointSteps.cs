@@ -2,6 +2,7 @@
 using Shouldly;
 using api_acceptance_tests.Models;
 using System.Collections.Generic;
+using System.Configuration;
 using TechTalk.SpecFlow;
 
 namespace api_acceptance_tests.Steps
@@ -14,7 +15,7 @@ namespace api_acceptance_tests.Steps
         [Given(@"I am requesting photo metadata")]
         public void GivenIAmRequestingPhotoMetadata()
         {
-            Save("uri", "http://jsonplaceholder.typicode.com/photos");            
+            Save("endpoint", ConfigurationManager.AppSettings["PhotoEndpoint"]);
         }
 
         [Then(@"the response should include (.*) photos")]

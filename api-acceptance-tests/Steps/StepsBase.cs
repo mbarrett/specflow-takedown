@@ -1,4 +1,7 @@
-﻿using TechTalk.SpecFlow;
+﻿using System;
+using System.Net;
+using api_acceptance_tests.Support;
+using TechTalk.SpecFlow;
 
 namespace api_acceptance_tests.Steps
 {

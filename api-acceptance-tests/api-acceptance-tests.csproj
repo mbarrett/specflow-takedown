@@ -52,6 +52,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="TechTalk.SpecFlow, Version=1.9.0.77, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
       <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
       <Private>True</Private>
@@ -92,6 +93,7 @@
     <Compile Include="Steps\UserEndpointSteps.cs" />
     <Compile Include="Steps\PhotoEndpointSteps.cs" />
     <Compile Include="Steps\StepsBase.cs" />
+    <Compile Include="Support\SpecFlowHooks.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

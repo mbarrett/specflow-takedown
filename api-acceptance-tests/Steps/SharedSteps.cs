@@ -1,4 +1,5 @@
-﻿using api_acceptance_tests.Support;
+﻿using System.Configuration;
+using api_acceptance_tests.Support;
 using TechTalk.SpecFlow;
 
 namespace api_acceptance_tests.Steps
@@ -9,8 +10,10 @@ namespace api_acceptance_tests.Steps
         [When(@"I make a request")]
         public void WhenIMakeARequest()
         {
-            var uri = Retrieve<string>("uri");
-            var response = HttpClient.Get(uri);
+            var uri = ConfigurationManager.AppSettings["ApiUri"];
+            var endpoint = Retrieve<string>("endpoint");
+
+            var response = HttpClient.Get(uri + endpoint);
 
             Save("response", response);
         }     

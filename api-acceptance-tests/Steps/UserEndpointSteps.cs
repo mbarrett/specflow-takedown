@@ -2,6 +2,7 @@
 using Shouldly;
 using api_acceptance_tests.Models;
 using System.Collections.Generic;
+using System.Configuration;
 using TechTalk.SpecFlow;
 
 namespace api_acceptance_tests.Steps
@@ -14,7 +15,7 @@ namespace api_acceptance_tests.Steps
         [Given(@"I am requesting user metadata")]
         public void GivenIAmRequestingUserMetadata()
         {
-            Save("uri", "http://jsonplaceholder.typicode.com/users");
+            Save("endpoint", ConfigurationManager.AppSettings["UserEndpoint"]);
         }
 
         [Then(@"the response should include (.*) users")]
