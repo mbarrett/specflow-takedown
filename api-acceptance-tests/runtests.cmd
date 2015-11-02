@@ -11,6 +11,10 @@
 
 SpecRun.exe run %profile%.srprofile "/baseFolder:%~dp0\bin\Debug" /log:specrun.log %2 %3 %4 %5
 
+@cd ..\..\..\
+
+packages\Pickles.CommandLine.1.2.3\tools\pickles.exe --feature-directory=api-acceptance-tests\Features --output-directory=documentation --documentation-format=word
+
 :end
 
 @popd
