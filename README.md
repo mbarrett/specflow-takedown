@@ -21,6 +21,16 @@ Or even better use the command line to run all the tests:
 * Navigate to the root of the specflow-takedown project (cd [file_location]\specflow-takedown\api-acceptance-tests)
 * Execute the command line test runner by typing 'runtests.cmd' and hit [Enter]
 
+##Auto generated documentation
+
+Running acceptance tests via the CLI means we can generate some useful reports and documentation.
+
+SpecRun provides a nice reporting structure for your acceptance tests. These reports can be found within the 'TestResults' folder. More information on SpecRun reporting here <a href="http://www.specflow.org/documentation/Reporting/">http://www.specflow.org/documentation/Reporting/</a>.
+
+Pickles is a tool that will output features as human readable documentation. These files are generated within the 'Documentation' folder. More information on Pickles reporting here <a href="http://docs.picklesdoc.com/en/latest/StartSimple/">http://docs.picklesdoc.com/en/latest/StartSimple/</a>
+
+It is recommended that any generated reports should be displayed as artifacts within your automated build process.
+
 ##Troubleshooting
 
 The acceptance tests make a GET request to various endpoints within <a href="http://jsonplaceholder.typicode.com">jsonplaceholder.typicode.com<a/>. In case of request timeouts please check your connection to <a href="http://jsonplaceholder.typicode.com">jsonplaceholder.typicode.com<a/>. 
