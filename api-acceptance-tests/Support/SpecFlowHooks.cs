@@ -11,10 +11,10 @@ namespace api_acceptance_tests.Support
         [BeforeScenario]
         public static void BeforeScenario()
         {
-            CheckApiIsResponding();
+            WarmUpApi();
         }
 
-        private static void CheckApiIsResponding()
+        private static void WarmUpApi()
         {
             var uri = ConfigurationManager.AppSettings["ApiUri"];
             var response = HttpClient.Get(uri);
